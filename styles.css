@@ -1,0 +1,691 @@
+
+/* Ajustar el tamaño de las imágenes en dispositivos pequeños */
+body {
+    font-family: 'Poppins', Consolas, 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
+    color: #f4f4f4;
+    overflow-x: hidden; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+header h1 a {
+    color: inherit; /* Mantener el color del texto original */
+    text-decoration: none; /* Quitar el subrayado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner-image {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0; /* Añadido */
+    transform: scale(0.8); /* Añadido */
+    transition: all 1.2s ease-in-out; /* Ajuste de duración */
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1em;
+}   
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+}
+
+#projects .projects:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0; /* Remove any padding at the bottom of the last project */
+}
+
+#contact {
+    background-color: #FBDA04;
+    color: #2d2d2d;
+    font-size: 1.5em;
+    padding: 1em 2em;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+#contact h2 {
+    text-align: left; 
+    color: inherit; 
+}
+
+.linkedin-logo {
+    width: 35px;
+    height: auto;
+    vertical-align: middle; 
+    margin-left: 8px; 
+}
+
+#projects .projects {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0; /* Añadido */
+    transform: translateY(50px); 
+    transition: all 1.2s ease-in-out; /* Ajuste de duración */
+}
+
+#projects .projects img {
+    max-width: 100%; 
+    width: 1000px; 
+    height: auto; 
+    border-radius: 8px;
+    margin-bottom: 1em; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+a {
+    color: #2d2d2d;
+    font-weight: bold ;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65%; 
+    height: auto;  
+}
+
+#details img {
+    border-radius: 0; 
+}
+
+#details img:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#details img:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#outlands-13 {
+    border-radius: 0 !important; 
+}
+
+.interactive-image {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.interactive-image:hover {
+    transform: scale(1.03);
+    opacity: 0.8;   
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+a {
+    color: #2d2d2d;
+    font-weight: bold ;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.designs  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%; 
+    height: auto;  
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Alinea la flecha a la derecha */
+    font-size: 24px;
+    text-decoration: none;
+    color: #000; /* Color de la flecha */
+    background-color: #fff; /* Color de fondo de la flecha */
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Añade cursor de puntero */
+}
+
+.scroll-to-top:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el ratón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra más pronunciada al pasar el ratón */
+}
+
+.scroll-to-top:focus {
+    outline: none; /* Quita el contorno predeterminado al hacer clic */
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px); /* Reduce el desplazamiento inicial */
+    transition: all 0.8s ease-in-out; /* Reduce el tiempo de transición */
+}
+
+
+/* Carrusel *//* Carrusel */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center; /* Center align text */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Adjust as needed */
+    object-fit: contain;
+}
+
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #fff; /* Adjust text color */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #717171;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+/* Estilos previos */
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        margin-right: -20px;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 4px 0;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+.banner-image {
+    display: block;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1.2s ease-in-out;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+}
+
+#projects .projects:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#contact {
+    background-color: #FBDA04;
+    color: #2d2d2d;
+    font-size: 1.5em;
+    padding: 1em 2em;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+#contact h2 {
+    text-align: left;
+    color: inherit;
+}
+
+.linkedin-logo {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+#projects .projects {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease-in-out;
+}
+
+#projects .projects img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+a {
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 65%;
+    height: auto;
+}
+
+#details img {
+    border-radius: 0;
+}
+
+#details img:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#details img:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#outlands-13 {
+    border-radius: 0 !important;
+}
+
+.interactive-image {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.interactive-image:hover {
+    transform: scale(1.03);
+    opacity: 0.8;
+}
+
+.designs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: auto;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-to-top:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top:focus {
+    outline: none;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+  }
+
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+    background-color: #717171;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media only screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 1em;
+    }
+
+    header {
+        margin-bottom: 0.9em;
+    }
+
+    .centered-image {
+        max-width: 90%;       
+    }
+
+    #projects {  
+        padding: 0;
+    }
+
+    #projects p {  
+        font-size: 0.7em;
+    }
+
+    #projects .projects {  
+        margin: 0; 
+        padding: 0;
+    }
+
+    .projects img {
+        max-width: 100%; 
+    }
+
+    #details {  
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1.2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #resume  {  
+        margin: 0;
+        padding: 0;
+        padding-bottom: 1.2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   #contact {  
+    margin: 0; 
+    padding: 0.9em;
+    border-radius: 0;
+}
+
+#contact h2 { 
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#contact p {  
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.8em;
+ }
+
+ .linkedin-logo {
+    width: 20px; 
+    margin-left: 5px;
+}
+
+ footer {      
+    font-size: 0.6em;
+ }
+
+}
